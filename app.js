@@ -1,5 +1,16 @@
 $(document).ready(function() {
-	$('#izq').click(function() {
+  $('#normal').click(function() {
+    $('#proteina').css({'width': '400px', 'height': 'auto'});
+    });
+    $('#ampliar').click(function() {
+    $('#proteina').css({'width': '+=10px', 'height': 'auto'});
+    });
+    $('#reducir').click(function() {
+    $('#proteina').css({'width': '-=10px','height': 'auto'});
+  });
+
+
+$('#izq').click(function() {
 		$('#proteina').animate({
 		'marginLeft' : "-=40px" 
 		});
@@ -18,31 +29,14 @@ $(document).ready(function() {
 		$('#proteina').animate({
 		'marginTop' : "-=40px" 
         });
+      });
+   
 
-    // AMPLIAR REDUCIR
-    $('#normal').click(function() {
-    $('#proteina').css({'width': '400px', 'height': 'auto'});
-    });
-    $('#ampliar').click(function() {
-    $('#proteina').css({'width': '+=10px', 'height': 'auto'});
-    });
-    $('#reducir').click(function() {
-    $('#proteina').css({'width': '-=10px','height': 'auto'});
-    
-        // MOSTRAR OCULTAR
-
-        $('#ocultar').click(function(){
+  $('#ocultar').click(function(){
           $('#proteina').hide();
         });
 
-        $('#mostrar').click(function(){
+  $('#mostrar').click(function(){
           $('#proteina').show();
-
-
+});
         });
-
-
-
-        });
-    });
-})
